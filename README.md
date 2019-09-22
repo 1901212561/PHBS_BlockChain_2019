@@ -7,4 +7,5 @@
 1901212561  
 
 ## Homework 1:ScroogeCoin  
-* In this homework, we will implement the ScroogeCoin discussed during class, where the central authority Scrooge receives transactions from users. 
+* In this homework, I have implemented the ScroogeCoin, where the central authority Scrooge receives transactions from users.  In each block, Scrooge will receive a list of transactions, validate the transactions he receives, and publish a list of validated transactions.  
+* The homework is uploaded to Homework1_ScroogeCoin.  
