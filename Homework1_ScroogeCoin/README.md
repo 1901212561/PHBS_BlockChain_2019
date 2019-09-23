@@ -28,13 +28,25 @@ The idea of the implementation will be described in detail later.
     ```  
   **Ⅱ.The signatures on each input of {@code tx} are valid.**  
    * This condition makes sure that people who paid the money is the money's owner.
-   * To implement this, I go through  all the inputs of the transaction and check if all the inputs' *publickey*, *message* and  *signature* can match.
+   * To implement this, I go through all the inputs of the transaction and check if all the inputs' *publickey*, *message* and  *signature* can match.
       ```js
      if (currentInput.signature == null || lastOutput.address == null )
          return false;
      else if (!Crypto.verifySignature(lastOutput.address,tx.getRawDataToSign(ii),currentInput.signature))
          return false;
      ```
+   **Ⅲ.No UTXO is claimed multiple times by {@code tx}.**  
+   * This condition makes sure that there is no double spending in the given transaction.
+   * To implement this, for a certain input, I go through all the inputs after it to see if there is any input using the same UTXO with it. If there is, then return false.
+      ```js
+     for (int jj = ii + 1; jj < tx.numInputs(); jj++) {
+         Transaction.Input nextInput = tx.getInput(jj);
+         UTXO nextUtxo = new UTXO(nextInput.prevTxHash, nextInput.outputIndex);
+         if (currentUtxo.equals(nextUtxo))
+             return false;
+     }
+     ```
+  
   
   
 
