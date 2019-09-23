@@ -91,7 +91,10 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Res
 #### Ⅱ. ***handleTxs()***  
 Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
  ---- | ----- | ------ | ------ | ------  
- *unordered_valid_txs()*  |Given an unordered valid array of proposed transactions to see if it can tell.  | {*tx4, tx1, tx5*} | True | True 
+ *unordered_valid_txs()*  |Given an unordered valid array of proposed transactions to see if it can tell.  | {*tx4, tx1, tx0, tx5*} | True | True  
+ 
+* Note that for the input array {*tx4, tx1, tx0, tx5*}, each transaction is valid. Logically it can only work when the transctions happen as the orders describing bellow.  
+![Image of unordered_valid_txs](https://github.com/1901212561/PHBS_BlockChain_2019/Homework1_ScroogeCoin/unordered_valid_txs.png) 
 
 
 
