@@ -12,13 +12,14 @@ The idea of the implementation will be described in detail later.
 * This is the first time I use java to finish a project. Thanks to everyone who gives me help selflessly and patiently.
 ## B.The idea of the implementation
 ### 1. ***TxHandler()***  
-* This method is used to creat a public ledger whose current UTXOPool is utxoPool.  
+* This method is used to create a public ledger whose current UTXOPool is utxoPool.  
 * In order to make a defensive copy of utxoPool, I use the *UTXOPool(UTXOPool uPool)* constructor.  
   ```js 
   this.utxoPool = new UTXOPool(utxoPool);
   ``` 
 ### 2. ***isValidTx()***  
-* This method is used to verify the validity of each transaction. It returns true only if the transaction meets the following five conditions.  
+* This method is used to verify the validity of the given transaction. 
+* It returns true only if the transaction meets the following five conditions.  
   **Ⅰ.All outputs claimed by {@code tx} are in the current UTXOpool.**  
   * This condition makes sure that all the inputs of the transaction are generated from past transactions' outputs.
   * To implement this, I go through all the inputs of the transaction, and check if the utxoPool (create from *TxHandler()*) contains the current input's utxo.
@@ -60,7 +61,20 @@ The idea of the implementation will be described in detail later.
      if (totalInputAmount < totalOutputAmount)
          return false;
      ```
-* If the transaction can meet the these five conditions, it returns true which means it is a valid transaction.  
+* If the given transaction can meet the these five conditions, it returns true which means it is a valid transaction.  
+### 3. ***handleTxs()***  
+* Given an unordered array of proposed transactions, this method can check each transaction for correctness and then return a mutually valid array of accepted transactions, updating the current UTXO pool as well.  
+* Considering the input array is unorder, some transactions may be valid due to other transactions' confirmation. So I go through all the transactions over and over again until no valid transactions can be found. If there are valid transactions, update the utxopool. This could be kind of inefficient, but it can make sure there won't be any mistake.
+* To implement this, I divide it into three steps.  
+  * Step 1. Go through all the transactions. If the transaction has been checked, change another transaction back to Step 1.  
+  * Step 2. Check the validity of this transaction using *isValidTx()* . If it is valid,  
+    * add it into the validTransactions.  
+    * update the UTXOPool: add new valid output & delete the spent output.  
+  * Step 3. If there is no new valid transactions can be found, stop going through all the transactions. The list *validTransactions* is what we need.
+
+
+ 
+   
   
   
 
