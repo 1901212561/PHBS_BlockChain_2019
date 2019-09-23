@@ -53,7 +53,13 @@ The idea of the implementation will be described in detail later.
      if (currentOutput.value < 0)
          return false;
      ```
+   **Ⅴ.The sum of {@code tx}s input values is greater than or equal to the sum of its output values**  
+   * This condition is also easy to understand because except  coinbase transaction, no paycoins transactions will have the output amount larger than the input amount.
+   * To implement this, I go through all the outputs and outpus, and sum the amounts of inputs and outputs respectively. If the outputs larger than inputs, it returns false.
+      ```js
+     if (totalInputAmount < totalOutputAmount)
+         return false;
+     ```
   
   
-* (5) the sum of tx’s input values is greater than or equal to the sum of
-its output values; and false otherwise.
+
