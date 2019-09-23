@@ -89,11 +89,12 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Res
   *output_larger_than_input()*  | Test for the sum of transactions' input values is greater than or equal to the sum of its output values. | Transaction *tx3* with output > input even though each output amount is less than the total inputs.| False | False
 * Note that all the testing data with certain deficiencies can become the valid transactions only if we fix the deficiencies. This can be ensure that the data for testing are suitable for the certain circumstances we want.  
 #### Ⅱ. ***handleTxs()***  
-Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
+Test Function  | Test Pursue  |  Data for testing  |Expected Result (validList) |Actual Result
  ---- | ----- | ------ | ------ | ------  
- *unordered_valid_txs()*  |Given an unordered valid array of proposed transactions to see if it can tell.  | {*tx4, tx1, tx0, tx5*} | True | True  
+ *unordered_valid_txs()*  |Test for an unordered valid array of proposed transactions.  | {*tx4, tx1, tx0, tx5*} | {*tx0, tx1, tx4, tx5*} | {*tx0, tx1, tx4, tx5*}  
+ *unordered_invalid_txs()*  |Test for an unordered invalid array of proposed transactions.  | {*tx4, tx6, tx0, tx5, tx1*} *tx5* and *tx6* are double spending.| {*tx0, tx1, tx4, tx5*} | {*tx0, tx1, tx4, tx5*}  
  
-* Note that for the input array {*tx4, tx1, tx0, tx5*}, each transaction is valid. Logically it can only work when the transctions happen as the orders describing bellow.  
+* Note that for the input array {*tx4, tx1, tx0, tx5*}, each transaction is valid. Logically it can only work when the transctions happen as the orders describing bellow. But no matter what orders we send into the *unordered_valid_txs()*, it will return a mutually valid array of accepted transactions. So the method *handleTxs()* works.
 <div align=center><img width="250" height="300" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework1_ScroogeCoin/unordered_valid_txs.png"/></div>
 
 
