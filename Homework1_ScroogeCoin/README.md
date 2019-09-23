@@ -19,7 +19,7 @@ The idea of the implementation will be described in detail later.
   ``` 
 ### 2. ***isValidTx()***  
 * This method is used to verify the validity of each transaction. It returns true only if the transaction meets the following five conditions.  
-**Ⅰ.All outputs claimed by {@code tx} are in the current UTXOpool.**  
+Ⅰ.All outputs claimed by {@code tx} are in the current UTXOpool.  
   * This condition makes sure that all the inputs of the transaction are generated from past transactions' outputs.
   * To implement this, I go through all the inputs of the transaction, and check if the utxoPool (create from *TxHandler()*) contains the current input's utxo.
     ```js
