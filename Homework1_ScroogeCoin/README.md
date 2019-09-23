@@ -75,8 +75,9 @@ The idea of the implementation will be described in detail later.
 ### 01. The prepare of the test  
 * I extend the transaction class and add a new method *signTX()* to add signature for each transaction.
 * In the @Before module, I create the coinbase transaction *tx0* and initialize the UTXOPool. I also create 9 translations. Some of them are correct  while others are incorrect. They will be tested in the following @test modules.
-### 02.The results of the test  
-#### Ⅰ.***isValidTx()***  
+### 02.The results of the test 
+* In order to express the test results succinctly and clearly, I made the following two tables.
+#### Ⅰ. ***isValidTx()***  
 Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
  ---- | ----- | ------ | ------ | ------  
  *valid_transaction()*  |Test for valid transactions.  | Valid transaction *tx1* | True | True 
@@ -87,7 +88,7 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Res
   *output_negative()*  | Test for all of transactions' output values are non-negative. | Transaction *tx8* with negative amount of outputs even though the total amount of outputs less than the total inputs.| False | False
   *output_larger_than_input()*  | Test for the sum of transactions' input values is greater than or equal to the sum of its output values. | Transaction *tx3* with output > input even though each output amount is less than the total inputs.| False | False
 * Note that all the testing data with certain deficiencies can become the valid transactions only if we fix the deficiencies. This can be ensure that the data for testing are suitable for the certain circumstances we want.  
-#### Ⅱ.***handleTxs()***  
+#### Ⅱ. ***handleTxs()***  
 
 
 
