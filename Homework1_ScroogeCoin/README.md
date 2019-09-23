@@ -74,12 +74,12 @@ The idea of the implementation will be described in detail later.
 ## C.The description and purpose of the test functions
 ### The prepare of the test  
 * I extend the transaction class and add a new method *signTX()* to add signature for each transaction.
-* In the @Before module, I create the coinbase transaction and initialize the UTXOPool. I also create 9 translations. Some of them are correct  while others are incorrect. They will be tested in the following @test modules.
+* In the @Before module, I create the coinbase transaction *tx0* and initialize the UTXOPool. I also create 9 translations. Some of them are correct  while others are incorrect. They will be tested in the following @test modules.
 ### The results of the test  
 #### ***isValidTx()***  
 Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
  ---- | ----- | ------ | ------ | ------  
- 单元格内容  | 单元格内容 | 单元格内容 | 单元格内容 | 单元格内容 
+ *valid_transaction()*  | Given a valid transaction, to see if it can tell.  | valid transaction *tx1* | true | true 
  单元格内容  | 单元格内容 | 单元格内容 | 单元格内容 | 单元格内容 
 
 
