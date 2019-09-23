@@ -89,6 +89,9 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Res
   *output_larger_than_input()*  | Test for the sum of transactions' input values is greater than or equal to the sum of its output values. | Transaction *tx3* with output > input even though each output amount is less than the total inputs.| False | False
 * Note that all the testing data with certain deficiencies can become the valid transactions only if we fix the deficiencies. This can be ensure that the data for testing are suitable for the certain circumstances we want.  
 #### Ⅱ. ***handleTxs()***  
+Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
+ ---- | ----- | ------ | ------ | ------  
+ *valid_transaction()*  |Test for valid transactions.  | Valid transaction *tx1* | True | True 
 
 
 
