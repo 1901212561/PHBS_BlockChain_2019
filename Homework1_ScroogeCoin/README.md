@@ -14,9 +14,9 @@ The idea of the implementation will be described in detail later.
 ### 1. ***TxHandler()***  
 * This method is used to creat a public ledger whose current UTXOPool is utxoPool.  
 * In order to make a defensive copy of utxoPool, I use the *UTXOPool(UTXOPool uPool)* constructor.  
-```js 
-this.utxoPool = new UTXOPool(utxoPool);
-``` 
+  ```js 
+  this.utxoPool = new UTXOPool(utxoPool);
+  ``` 
 ### 2. ***isValidTx()***  
 * This method is used to verify the validity of each transaction. It returns true only if the transaction meets the following five conditions.  
 **Ⅰ.All outputs claimed by {@code tx} are in the current UTXOpool.**  
