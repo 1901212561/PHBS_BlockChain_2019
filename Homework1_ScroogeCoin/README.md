@@ -80,10 +80,13 @@ The idea of the implementation will be described in detail later.
 Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
  ---- | ----- | ------ | ------ | ------  
  *valid_transaction()*  |Test for valid transactions.  | Valid transaction *tx1* | True | True 
- *output_NOT_in_utxopool1()*  | Test for UTXO not contained in UTXOPool because the previous transaction hasn't happened. | Transaction *tx4* without previous transaction *tx1* | False | False
-  *output_NOT_in_utxopool2()*  | Test for UTXO not contained in UTXOPool because of pointing the wrong previous transaction's index. | Transaction *tx2* with correct previous transaction *tx1* 's hashValue but wrong index| False | False
+ *output_NOT_in_utxopool1()*  | Test for UTXO not being containing in UTXOPool because the previous transaction hasn't happened. | Transaction *tx4* without previous transaction *tx1* | False | False
+  *output_NOT_in_utxopool2()*  | Test for UTXO not being contained in UTXOPool because of pointing the wrong previous transaction's index. | Transaction *tx2* with correct previous transaction *tx1* 's hashValue but wrong index| False | False
   *invalid_signature()*  | Test for transaction with wrong signature. | Transaction *tx9* with wrong signature| False | False
- 
+  *utxo_claimed_twice()*  | Test for no UTXO is claimed multiple times. | Transaction *tx7* with double spending| False | False
+  *output_negative()*  | Test for all of transactions' output values are non-negative. | Transaction *tx8* with negative amount of outputs even though the total amount of outputs less than the total inputs.| False | False
+  *output_larger_than_input()*  | Test for the sum of transactions' input values is greater than or equal to the sum of its output values. | Transaction *tx3* with output > input even though each output amount is less than the total inputs.| False | False
+
 
 
 
