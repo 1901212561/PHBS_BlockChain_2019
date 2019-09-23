@@ -6,7 +6,7 @@
 **StudentID:**
 1901212561  
 ## A.Summary
-* In this homework, I have updated the TxHandler class, which contains 3 methods: *TxHandler()*, *isValidTx()*, and *handleTxs()*. 
+* In this homework, I have updated the **TxHandler** class, which contains 3 methods: *TxHandler()*, *isValidTx()*, and *handleTxs()*. 
 The idea of the implementation will be described in detail later.  
 * I also created a test suite to verify the implementation. The third part is the description and purpose of the test functions. 
 * This is the first time I use java to finish a project. Thanks to everyone who gives me help selflessly and patiently.
