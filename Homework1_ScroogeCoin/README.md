@@ -72,10 +72,10 @@ The idea of the implementation will be described in detail later.
     * update the UTXOPool: add new valid output & delete the spent output.  
   * Step 3. If there is no new valid transactions can be found, stop going through all the transactions. The list *validTransactions* is what we need.
 ## C.The description and purpose of the test functions
-### The prepare of the test  
+### 01. The prepare of the test  
 * I extend the transaction class and add a new method *signTX()* to add signature for each transaction.
 * In the @Before module, I create the coinbase transaction *tx0* and initialize the UTXOPool. I also create 9 translations. Some of them are correct  while others are incorrect. They will be tested in the following @test modules.
-### The results of the test  
+### 02.The results of the test  
 #### ***isValidTx()***  
 Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
  ---- | ----- | ------ | ------ | ------  
