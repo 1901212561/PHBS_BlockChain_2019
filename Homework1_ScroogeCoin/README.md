@@ -92,10 +92,11 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Res
 Test Function  | Test Pursue  |  Data for testing  |Expected Result (validList) |Actual Result
  ---- | ----- | ------ | ------ | ------  
  *unordered_valid_txs()*  |Test for an unordered valid array of proposed transactions.  | {*tx4, tx1, tx0, tx5*} | {*tx0, tx1, tx4, tx5*} | {*tx0, tx1, tx4, tx5*}  
- *unordered_invalid_txs()*  |Test for an unordered invalid array of proposed transactions.  | {*tx4, tx6, tx0, tx5, tx1*} *tx5* and *tx6* are double spending.| {*tx0, tx1, tx4, tx5*} | {*tx0, tx1, tx4, tx5*}  
- 
+ *unordered_invalid_txs()*  |Test for an unordered invalid array of proposed transactions.  | {*tx4, tx6, tx0, tx5, tx1*}                while *tx5* and *tx6* are double spending.| {*tx0, tx1, tx4, tx6*} | {*tx0, tx1, tx4, tx6*}  
 * Note that for the input array {*tx4, tx1, tx0, tx5*}, each transaction is valid. Logically it can only work when the transctions happen as the orders describing bellow. But no matter what orders we send into the *unordered_valid_txs()*, it will return a mutually valid array of accepted transactions. So the method *handleTxs()* works.
-<div align=center><img width="250" height="300" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework1_ScroogeCoin/unordered_valid_txs.png"/></div>
+<div align=center><img width="250" height="300" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework1_ScroogeCoin/unordered_valid_txs.png"/></div>  
+* For the second test, the input array {*tx4, tx6, tx0, tx5, tx1*} contains the double spending transactions *tx5* and *tx6*. So no matter what orders we send into the *unordered_valid_txs()*,  *tx5* and *tx6* won't pass the test at the same time. It only pass the transactions handle first. In this case, it is *tx6*.  
+<div align=center><img width="250" height="300" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework1_ScroogeCoin/unordered_invalid_txs.png"/></div>
 
 
 
