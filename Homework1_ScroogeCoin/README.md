@@ -98,6 +98,7 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result (validList) 
 
 * For the second test, the input array {*tx4, tx6, tx0, tx5, tx1*} contains the double spending transactions *tx5* and *tx6*. So no matter what orders we send into the *unordered_valid_txs()*,  *tx5* and *tx6* won't pass the test at the same time. It only pass the transactions handle first. In this case, it is *tx6*.  
 <div align=center><img width="400" height="300" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework1_ScroogeCoin/unordered_invalid_txs.png"/></div>
+
 ### 03.The results from *IntelliJ IDEA*
 * By programming the above test functions, I valid all the tests can pass. The results from *IntelliJ IDEA* is below.
 
