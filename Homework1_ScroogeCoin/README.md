@@ -82,6 +82,7 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Res
  *valid_transaction()*  |Test for valid transactions.  | Valid transaction *tx1* | True | True 
  *output_NOT_in_utxopool1()*  | Test for UTXO not contained in UTXOPool because the previous transaction hasn't happened. | Transaction *tx4* without previous transaction *tx1* | False | False
   *output_NOT_in_utxopool2()*  | Test for UTXO not contained in UTXOPool because of pointing the wrong previous transaction's index. | Transaction *tx2* with correct previous transaction *tx1* 's hashValue but wrong index| False | False
+  *invalid_signature()*  | Test for transaction with wrong signature. | Transaction *tx9* with wrong signature| False | False
  
 
 
