@@ -101,7 +101,8 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result (validList) 
 
 ### 03.The results from *IntelliJ IDEA*
 * By programming the above test functions, I valid all the tests can pass. The results from *IntelliJ IDEA* is below.
-
+<div align=center><img width="400" height="300" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework1_ScroogeCoin/screenshoot%20of%20the%20IDE.png
+"/></div>
 
 
 
