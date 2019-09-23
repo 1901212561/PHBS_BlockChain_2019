@@ -79,8 +79,10 @@ The idea of the implementation will be described in detail later.
 #### ***isValidTx()***  
 Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
  ---- | ----- | ------ | ------ | ------  
- *valid_transaction()*  | Given a valid transaction, to see if it can tell.  | valid transaction *tx1* | true | true 
- 单元格内容  | 单元格内容 | 单元格内容 | 单元格内容 | 单元格内容 
+ *valid_transaction()*  |Test for valid transactions.  | Valid transaction *tx1* | True | True 
+ *output_NOT_in_utxopool1()*  | Test for UTXO not contained in UTXOPool because the previous transaction hasn't happened. | Transaction *tx4* without previous transaction *tx1* | False | False
+  *output_NOT_in_utxopool2()*  | Test for UTXO not contained in UTXOPool because of pointing the wrong previous transaction's index. | Transaction *tx2* with correct previous transaction *tx1* 's hashValue but wrong index| False | False
+ 
 
 
 
