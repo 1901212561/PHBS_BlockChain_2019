@@ -91,7 +91,7 @@ Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Res
 #### Ⅱ. ***handleTxs()***  
 Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
  ---- | ----- | ------ | ------ | ------  
- *unordered_valid_txs()*  |Given an unordered valid array of proposed transactions to see if it can tell.  | *tx4, tx1, tx5* | True | True 
+ *unordered_valid_txs()*  |Given an unordered valid array of proposed transactions to see if it can tell.  | {*tx4, tx1, tx5*} | True | True 
 
 
 
