@@ -76,7 +76,12 @@ The idea of the implementation will be described in detail later.
 * I extend the transaction class and add a new method *signTX()* to add signature for each transaction.
 * In the @Before module, I create the coinbase transaction and initialize the UTXOPool. I also create 9 translations. Some of them are correct  while others are incorrect. They will be tested in the following @test modules.
 ### The results of the test  
-#### is
+#### ***isValidTx()***  
+Test Function  | Test Pursue  |  Data for testing  |Expected Result  |Actual Result
+ ---- | ----- | ------ | ------ | ------  
+ 单元格内容  | 单元格内容 | 单元格内容 | 单元格内容 | 单元格内容 
+ 单元格内容  | 单元格内容 | 单元格内容 | 单元格内容 | 单元格内容 
+
 
 
 
