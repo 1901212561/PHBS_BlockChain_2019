@@ -46,11 +46,14 @@ The idea of the implementation will be described in detail later.
              return false;
      }
      ```
+  **Ⅳ.All of {@code tx}s output values are non-negative**  
+   * This condition is easy to understand because nobody will spend negative amount of money.
+   * To implement this, I go through all the outputs and check if their output amount is non-negative.
+      ```js
+     if (currentOutput.value < 0)
+         return false;
+     ```
   
   
-  
-
-* (3) no UTXO is claimed multiple times by tx,
-* (4) all of tx’s output values are non-negative, and
 * (5) the sum of tx’s input values is greater than or equal to the sum of
 its output values; and false otherwise.
