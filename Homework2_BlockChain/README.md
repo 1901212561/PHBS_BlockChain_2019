@@ -89,7 +89,7 @@ The part D is the description and purpose of the test functions.
 ## D.The Description and Purpose of the Test Functions
 ### 01. The Design of the Test  
 * In this homework, I have implemented the constructor *BlockChain()* and 5 methods in total. Given the state of the blockchain can be divided into two parts: the single branch scenario and the forking scenario, I test them in the scenarios respectively.
-* For preparation, I created the  genesisBlock and initialized the BlockChain in the @Before module. The design and the results can be found in the next part. 
+* For preparation, I created the  genesisBlock and initialized the BlockChain in the *@Before* module. The design and the results can be found in the next part. 
 ### 02.The Results of the Test 
 #### Ⅰ. Single Branch Scenario  
 * Using the constructor to create a new empty block chain and then add some blocks to see if it can add the block to the blockchain correctly. By this process, the six methods can be test. The details are shown in the following table. 
@@ -111,10 +111,14 @@ The part D is the description and purpose of the test functions.
 
   Test Function  | Test Purpose  |  Data for testing  | Diagram 
      ---- | ----- | ------ | ------ 
-  *CUT_OFF_AGE_Condition（）*  | Test for CUT_OFF_AGE_Condition. | Genesis block, 11 valid blocks linked one by one, a block whose parent node is genesis block and a block whose parent node is the first block linked to the genesis block.  |<div align=center><img width="700" height="50" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking01.png"/></div>
-  *MultipleBlocksAtTheSameHeight()*  |If there are multiple blocks at the same height, it should consider the oldest block in the longest valid branch. However, all of them should be in the clockchain. | Two valid blocks adding to the genesis block one after another. |<div align=center><img width="700" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking02.png"/></div> 
-   *ForkingAttack()* |Test if there are two branches with the same height, whichever has the next block first will become to the new longest valid branch.  |  Genesis block and three valid blocks.  |<div align=center><img width="600" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking03.png"/></div>   
+  *CUT_OFF_AGE_Condition（）*  | Test for CUT_OFF_AGE_Condition. | Genesis block, 11 valid blocks linked one by one, a block whose parent node is genesis block and a block whose parent node is the first block linked to the genesis block.  | Fig. 1
+  *MultipleBlocksAtTheSameHeight()*  |If there are multiple blocks at the same height, it should consider the oldest block in the longest valid branch. However, all of them should be in the clockchain. | Two valid blocks adding to the genesis block one after another. |
+   *ForkingAttack()* |Test if there are two branches with the same height, whichever has the next block first will become to the new longest valid branch.  |  Genesis block and three valid blocks.  |  Fig. 3  
    
+   
+   Fig.1  <div align=center><img width="300" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking01.png"/></div> 
+   Fig.2  <div align=center><img width="300" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking02.png"/></div>  
+   Fig.3  <div align=center><img width="300" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking03.png"/></div>   
 ### 03.The results from *IntelliJ IDEA*
 * By programming the above test functions, all the tests can pass. The results from *IntelliJ IDEA* is below.
 <div align=center><img width="900" height="250" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/TestResult.png"/></div>
