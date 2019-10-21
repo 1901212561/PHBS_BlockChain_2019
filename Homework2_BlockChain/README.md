@@ -111,13 +111,13 @@ The part D is the description and purpose of the test functions.
 
   Test Function  | Test Purpose  |  Data for testing  | Diagram 
      ---- | ----- | ------ | ------ 
-  *CUT_OFF_AGE_Condition（）*  | Test for CUT_OFF_AGE_Condition. | Genesis block, 11 valid blocks linked one by one, a block whose parent node is genesis block and a block whose parent node is the first block linked to the genesis block.  |<div align=center><img width="700" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking01.png"/></div>
-  *MultipleBlocksAtTheSameHeight()*  |If there are multiple blocks at the same height, it should consider the oldest block in the longest valid branch. However, all of them should be in the clockchain. | Two valid blocks adding to the genesis block one after another. |<div align=center><img width="600" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking02.png"/></div> 
+  *CUT_OFF_AGE_Condition（）*  | Test for CUT_OFF_AGE_Condition. | Genesis block, 11 valid blocks linked one by one, a block whose parent node is genesis block and a block whose parent node is the first block linked to the genesis block.  |<div align=center><img width="700" height="50" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking01.png"/></div>
+  *MultipleBlocksAtTheSameHeight()*  |If there are multiple blocks at the same height, it should consider the oldest block in the longest valid branch. However, all of them should be in the clockchain. | Two valid blocks adding to the genesis block one after another. |<div align=center><img width="700" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking02.png"/></div> 
    *ForkingAttack()* |Test if there are two branches with the same height, whichever has the next block first will become to the new longest valid branch.  |  Genesis block and three valid blocks.  |<div align=center><img width="600" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking03.png"/></div>   
    
 ### 03.The results from *IntelliJ IDEA*
 * By programming the above test functions, all the tests can pass. The results from *IntelliJ IDEA* is below.
-<div align=center><img width="900" height="200" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/TestResult.png"/></div>
+<div align=center><img width="900" height="150" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/TestResult.png"/></div>
 
 
 
