@@ -117,7 +117,7 @@ The part D is the description and purpose of the test functions.
    
 ### 03.The results from *IntelliJ IDEA*
 * By programming the above test functions, all the tests can pass. The results from *IntelliJ IDEA* is below.
-<div align=center><img width="900" height="150" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/TestResult.png"/></div>
+<div align=center><img width="900" height="250" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/TestResult.png"/></div>
 
 
 
