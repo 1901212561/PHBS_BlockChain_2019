@@ -112,9 +112,8 @@ The part D is the description and purpose of the test functions.
   Test Function  | Test Purpose  |  Data for testing  | Diagram 
      ---- | ----- | ------ | ------ 
   *CUT_OFF_AGE_Condition（）*  | Test for CUT_OFF_AGE_Condition. | Genesis block, 11 valid blocks linked one by one, a block whose parent node is genesis block and a block whose parent node is the first block linked to the genesis block.  | Fig. 1
-  *MultipleBlocksAtTheSameHeight()*  |If there are multiple blocks at the same height, it should consider the oldest block in the longest valid branch. However, all of them should be in the clockchain. | Two valid blocks adding to the genesis block one after another. |
+  *MultipleBlocksAtTheSameHeight()*  |If there are multiple blocks at the same height, it should consider the oldest block in the longest valid branch. However, all of them should be in the clockchain. | Two valid blocks adding to the genesis block one after another. |  Fig. 2  
    *ForkingAttack()* |Test if there are two branches with the same height, whichever has the next block first will become to the new longest valid branch.  |  Genesis block and three valid blocks.  |  Fig. 3  
-   
    
    Fig.1  <div align=center><img width="300" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking01.png"/></div> 
    Fig.2  <div align=center><img width="300" height="100" src="https://github.com/1901212561/PHBS_BlockChain_2019/blob/master/Homework2_BlockChain/%20images/Forking02.png"/></div>  
