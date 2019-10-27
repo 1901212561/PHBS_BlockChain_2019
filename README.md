@@ -14,3 +14,8 @@
 ## Homework 2:Block Chain  
 * In this homework, I have implemented a node that’s part of a block-chain-based distributed consensus protocol. My code would receive incoming transactions and blocks and maintain an updated block chain under some assumptions.
 * The homework is uploaded to Homework2_BlockChain.
+
+
+## Project:Block Chain  
+* In this homework, I have implemented a node that’s part of a block-chain-based distributed consensus protocol. My code would receive incoming transactions and blocks and maintain an updated block chain under some assumptions.
+* The homework is uploaded to Homework2_BlockChain.
