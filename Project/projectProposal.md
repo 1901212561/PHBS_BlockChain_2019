@@ -4,7 +4,7 @@ Charitable organizations often encounter barriers to success due to lack of tran
 
 ## **I.** **Motivation**
 
-There’s a set of problems charities need to address. We’ll look at three of them.
+There are a set of problems charities need to address. We’ll look at three of them.
 
 ####  **1.** **Loss of Credibility**
 
