@@ -16,6 +16,6 @@
 * The homework is uploaded to Homework2_BlockChain.
 
 
-## Project:Block Chain  
-* In this homework, I have implemented a node that’s part of a block-chain-based distributed consensus protocol. My code would receive incoming transactions and blocks and maintain an updated block chain under some assumptions.
-* The homework is uploaded to Homework2_BlockChain.
+## DApp:A Charity System Based on Ethereum
+* In this project, we will use Ethereum to build a decentralized autonomous charity where donors can trace their money from the moment it is given, to the moment it will be spent.
+* The proposal is uploaded to Project.
